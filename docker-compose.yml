@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: zt_admin
+      POSTGRES_PASSWORD: zt_admin_password
+      POSTGRES_DB: zt_hub
+    ports: ["5432:5432"]
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+volumes:
+  pgdata:
